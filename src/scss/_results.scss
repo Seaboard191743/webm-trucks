@@ -1,0 +1,11 @@
+.result {
+  @include containerWidth(270px, 596px, _);
+  margin: 0 0 1rem 0;
+  background: $primaryWhite;
+  @media (max-width: 1140px) {
+    @include containerWidth(100%, 200px, _);
+  }
+}
+.main__result {
+  padding: 1rem;
+}

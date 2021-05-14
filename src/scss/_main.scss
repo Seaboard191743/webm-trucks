@@ -1,0 +1,23 @@
+@import "./results";
+@import "./productList";
+
+.main {
+  @include containerWidth(Min(1140px, 100%), _, _);
+  @include flexStyles(column, _, _);
+  &__header {
+    margin: 0 0 1rem calc(270px + 1rem);
+    @media (max-width: 1140px) {
+      margin-left: 0;
+    }
+    & h2 {
+      @include fontDecor(1.375rem, $primaryBlack, _);
+    }
+  }
+  &__container {
+    @include flexStyles(_, _, _);
+    flex-flow: row wrap;
+    @media (max-width: 1140px) {
+      flex-direction: column;
+    }
+  }
+}

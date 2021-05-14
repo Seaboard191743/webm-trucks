@@ -1,0 +1,92 @@
+@import "./product-header";
+
+.productList {
+  @include containerWidth(Min(850px, 100%), auto, _);
+  &__desc {
+    width: Min(565px, 100%);
+    margin: 1rem 0 0 0;
+    color: $primaryTextColor;
+  }
+}
+.main__productList {
+  margin-left: auto;
+}
+
+.productItem {
+  min-height: 200px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  @include flexStyles(_, _, _);
+  background: $primaryWhite;
+  &__image {
+    @include containerWidth(224px, 200px, _);
+    background: $primaryBorderColor;
+    margin: 0 1rem 0 0;
+  }
+  &__content {
+    @include containerWidth(Min(400px, 100%), 100%, _);
+    @include flexStyles(column, _, _);
+  }
+  &__title {
+    @include fontDecor(Clamp(16px, 18px, 1vw), $primaryBlack, 700);
+  }
+  &__price {
+    @include fontDecor(Clamp(14px, 16px, 0.9vw), $primaryTextColor, 500);
+    margin-left: auto;
+  }
+  &__header {
+    margin: 0 0 0.5rem 0;
+  }
+}
+.image {
+  @include containerWidth(100%, 100%, _);
+  object-fit: cover;
+}
+.content {
+  display: flex;
+  @include containerWidth(Min(580px, 100%), _, _);
+  &__paragraph {
+    @include fontDecor(14px, $primaryBlack, 300);
+    margin: 0 0 1rem 0;
+  }
+  &__tags {
+    display: flex;
+    margin-top: auto;
+  }
+  &__tags > * {
+    @include fontDecor(12px, $primaryWhite, _);
+    padding: 5px;
+    background: #c4c4c4;
+    margin: 0 16px 0 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .main__productList {
+    margin-left: 0;
+    @include containerWidth(100%, auto, _);
+  }
+  .content {
+    @include containerWidth(100%, auto, _);
+  }
+  .productItem__content {
+    @include containerWidth(Min(500px, 100%), auto, _);
+  }
+}
+@media (max-width: 800px) {
+  .productItem {
+    flex-direction: column;
+    &__image {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .content {
+    flex-direction: column;
+  }
+  .content__tags {
+    margin: 0 0 1rem 0;
+  }
+}

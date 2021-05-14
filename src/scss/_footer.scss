@@ -1,0 +1,65 @@
+.footer {
+  @include containerWidth(Min(1140px, 100%), _, 0);
+  min-height: 280px;
+  margin: 0 auto;
+  @include flexStyles(column, _, _);
+  margin-top: 1.4rem;
+  background: $primaryWhite;
+  &__info {
+    display: flex;
+    flex-flow: row wrap;
+    & .desc {
+      @include containerWidth(Min(560px, 100%), _, 1rem);
+      @include fontDecor(14px, $primaryTextColor, _);
+      margin-top: 4rem;
+      @media (max-width: 890px) {
+        margin-top: 1rem;
+        padding: 1rem 1rem 2.4rem;
+      }
+    }
+  }
+  &__privacy {
+    min-height: 37px;
+    padding: 0.5rem;
+    @include flexStyles(_, center, center);
+    margin-top: auto;
+    background: $background;
+    & span {
+      @include fontDecor(14px, #828282, _);
+    }
+    & a {
+      @include fontDecor(14px, $blueLinkColor, _);
+      margin: 0 0.5rem;
+    }
+  }
+}
+.contacts {
+  padding: 2.4rem 1rem;
+  @media (max-width: 890px) {
+    padding-bottom: 1rem;
+  }
+  & .logo {
+    margin: 0 0 18px 0;
+  }
+  & > * {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.text {
+  width: 226px;
+  margin-left: 0.5rem;
+  margin-bottom: 11px;
+  @include fontDecor(14px, $primaryTextColor, _);
+}
+.contact__scl {
+  margin-top: 1rem;
+}
+.contact__scl > * {
+  margin: 0 0.7rem 0 0;
+}
+@media (max-width: 370px) {
+  .footer__privacy {
+    flex-direction: column;
+  }
+}

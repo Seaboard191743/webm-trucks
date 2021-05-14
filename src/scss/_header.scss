@@ -1,0 +1,41 @@
+.header {
+  @include containerWidth(Min(1140px, 100%), _, _);
+  &__logo {
+    height: 100px;
+    padding: 1rem;
+    background: $primaryWhite;
+    @include flexStyles(_, _, center);
+    margin: 0 0 1rem 0;
+  }
+}
+.logo {
+  @include fontDecor(1.25rem, "$primaryBlack", 500);
+}
+.nav__menu,
+.nav__subMenu {
+  @include containerWidth(Min(1140px, 100%), 50px, 1rem);
+  @include flexStyles(_, _, center);
+  text-transform: uppercase;
+  background: $primaryWhite;
+}
+
+.nav__subMenu {
+  height: 40px;
+  background: none;
+}
+.menu__item {
+  @include fontDecor(1rem, #8d8d8d, _);
+  margin-right: 1rem;
+}
+.subMenu__item {
+  @include fontDecor(12px, $blueLinkColor, _);
+  margin-right: 2rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 400px) {
+  .nav__menu {
+    height: 150px;
+    @include flexStyles(column, space-between, flex-start);
+  }
+}
