@@ -34,12 +34,11 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: "asset/inline",
-      },
-      {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: "asset/resource",
+        test: /\.(?:ico|gif|svg|png|jpg|jpeg)$/i,
+        loader: "file-loader",
+        options: {
+          name: "/images/[name].[ext]",
+        },
       },
     ],
   },
