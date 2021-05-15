@@ -19,9 +19,9 @@ $background: #d9d9d9;
   justify-content: $justify;
   align-items: $align;
 }
-@mixin btnStyles($btnWidth, $btnMargin, $btnBg) {
+@mixin btnStyles($btnWidth, $btnHeight, $btnBg) {
   padding: 0.6rem;
-  margin: $btnMargin;
+  height: $btnHeight;
   width: $btnWidth;
   border: none;
   background: $btnBg;

@@ -24,7 +24,65 @@
             <h2>Heading Level 1</h2>
         </div>
         <div class="main__container">
-            <div class="result main__result"></div>
+            <div class="result main__result">
+                <div class="result__title"></div>
+                <form class="result__form">
+                    <div class="param">
+                        <div class="param__head">
+                            <span>Param1</span>
+                            <img class="dropdown" src="../images/icons/dropdown_Arrow.svg" alt="arrow">
+                        </div>
+                        <div class="param__body param__checkbox">
+                            <input type="checkbox" class="box" id="val1">
+                            <label for="val1">value1</label><br>
+                            <input type="checkbox" class="box" id="val2">
+                            <label for="val2">value2</label><br>
+                            <input type="checkbox" class="box" id="val3" checked>
+                            <label for="val3">value3</label><br>
+                            <input type="checkbox" class="box" id="val4" checked>
+                            <label for="val3">value4</label><br>
+                            <input type="checkbox" class="box" id="val5">
+                            <label for="val5">value5</label><br>
+                        </div>
+                    </div>
+                    <div class="param">
+                        <div class="param__head">
+                            <span>Param2</span>
+                            <img class="dropdown" src="../images/icons/dropdown_Arrow.svg" alt="arrow">
+                        </div>
+                        <div class="param__body">
+                            <input type="radio" id="radio-val1" name="param2" value="rval1">
+                            <label for="radio-val1">value2_1</label><br>
+                            <input type="radio" id="radio-val2" name="param2" value="rval2">
+                            <label for="radio-val2">value2_2</label><br>
+                            <input type="radio" id="radio-val3" name="param2" value="rval3" checked>
+                            <label for="radio-val3">value2_3</label><br>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="param">
+                            <div class="param__head">
+                                <span>Param3</span>
+                                <img class="dropdown" src="../images/icons/dropdown_Arrow.svg" alt="arrow">
+                            </div>
+                            <div class="param__body param__body--flex">
+                                <input class="param__value" name="minvalue" placeholder="min">
+                                <input class="param__value maxvalue" name="maxvalue" placeholder="max">
+                            </div>
+                        </div>
+                        <div class="param">
+                            <div class="param__head">
+                                <span>Param4</span>
+                                <img class="dropdown" src="../images/icons/dropdown_Arrow.svg" alt="arrow">
+                            </div>
+                            <div class="param__body">
+                                <input class="param__value keyword" name="keyword" placeholder="Keyword">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn">Search</button>
+                </form>
+            </div>
             <div class="productList main__productList">
                 <div class="productList__header">
                     <div class="pagination">
@@ -56,20 +114,28 @@
                     </div>
                 </div>
                 <p class="productList__desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque accusantium ratione
-                    molestias soluta, provident nobis, assumenda dolorum voluptas incidunt inventore quia reiciendis
-                    quis? Quis quo molestias repellat? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Assumenda et at eveniet! Fugiat velit unde necessitatibus? Debitis illo vero aut. Iusto dolores,
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque
+                    accusantium ratione
+                    molestias soluta, provident nobis, assumenda dolorum voluptas incidunt inventore quia
+                    reiciendis
+                    quis? Quis quo molestias repellat? Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit.
+                    Assumenda et at eveniet! Fugiat velit unde necessitatibus? Debitis illo vero aut. Iusto
+                    dolores,
                     cupiditate error expedita veniam laborum repudiandae aspernatur eos?
                 </p>
                 <p class="productList__desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque accusantium ratione
-                    molestias soluta, link provident nobis, assumenda dolorum voluptas incidunt inventore quia
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque
+                    accusantium ratione
+                    molestias soluta, link provident nobis, assumenda dolorum voluptas incidunt inventore
+                    quia
                     reiciendis quis? Quis quo molestias repellat?
                 </p>
                 <p class="productList__desc">
-                    Iste, aliquid ducimus! Delectus in nisi quaerat temporibus blanditiis, molestias deleniti ea illum
-                    laudantium numquam. Laborum vero eligendi minus recusandae culpa sequi exercitationem iusto, ipsum
+                    Iste, aliquid ducimus! Delectus in nisi quaerat temporibus blanditiis, molestias
+                    deleniti ea illum
+                    laudantium numquam. Laborum vero eligendi minus recusandae culpa sequi exercitationem
+                    iusto, ipsum
                     sed suscipit fuga molestias veritatis!
                 </p>
             </div>

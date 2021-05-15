@@ -3,9 +3,83 @@
   margin: 0 0 1rem 0;
   background: $primaryWhite;
   @media (max-width: 1140px) {
-    @include containerWidth(100%, 200px, _);
+    @include containerWidth(100%, auto, _);
+  }
+  &__title {
+    padding: 0 0 0.8rem;
+    margin: 0 0 0.7rem 0;
+    border-bottom: 1px solid $primaryBorderColor;
+    @include fontDecor(1rem, $primaryBlack, 500);
+  }
+  &__form {
+    @media (max-width: 1140px) {
+      display: flex;
+      flex-flow: row wrap;
+    }
   }
 }
 .main__result {
   padding: 1rem;
+}
+.param {
+  margin: 0 0 0.7rem 0;
+  &__head {
+    height: 30px;
+    @include flexStyles(_, space-between, center);
+  }
+  &__body {
+    padding: 0.3rem 0;
+    width: 240px;
+    background: $primaryWhite;
+    & input {
+      border: 1px solid $primaryBorderColor;
+      &:focus {
+        border-color: $blueLinkColor;
+        &::placeholder {
+          color: $primaryTextColor;
+        }
+      }
+      &::placeholder {
+        @include fontDecor(16px, #828282, _);
+      }
+    }
+    &--flex {
+      display: flex;
+    }
+    & > * {
+      margin: 0 0.5rem 0.55rem 0;
+    }
+  }
+  &__value {
+    @include containerWidth(112px, 35px, 0.5rem);
+  }
+}
+.keyword {
+  @include containerWidth(238px, 35px, 0.5rem);
+}
+.btn {
+  @include btnStyles(238px, 35px, $primaryLinkColor);
+  border: none;
+  text-transform: uppercase;
+  @media (max-width: 1140px) {
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+.btn:hover,
+.btn:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+.maxvalue {
+  margin-left: 0.4rem;
+}
+.dropdown {
+  cursor: pointer;
+  transition: transform 0.3s;
+  @media (max-width: 1140px) {
+    display: none;
+  }
+  &--active {
+    transform: rotate(180deg);
+  }
 }

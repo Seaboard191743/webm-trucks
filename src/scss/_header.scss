@@ -32,7 +32,12 @@
   margin-right: 2rem;
   text-transform: capitalize;
 }
-
+.menu__item, .subMenu__item {
+  transition: color .3s;
+}
+.menu__item:hover, .subMenu__item:hover {
+  color: $primaryLinkColor;
+}
 @media (max-width: 400px) {
   .nav__menu {
     height: 150px;
